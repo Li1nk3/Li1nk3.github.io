@@ -1,0 +1,222 @@
+<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Li1nk's Blog</title><meta name="author" content="Li1nk"><meta name="copyright" content="Li1nk"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="hi, I am Li1nk">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Li1nk&#39;s Blog">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="Li1nk&#39;s Blog">
+<meta property="og:description" content="hi, I am Li1nk">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/image/icon.jpg">
+<meta property="article:author" content="Li1nk">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/image/icon.jpg"><link rel="shortcut icon" href="/image/icon.jpg"><link rel="canonical" href="http://example.com/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Li1nk\'s Blog',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (false) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/image/icon.jpg" onerror="this.onerror=null;this.src='/img/icon.jpg'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">14</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url(/image/Default.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Li1nk's Blog</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Li1nk's Blog</h1><div id="site-subtitle"><span id="subtitle"></span></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/02/27/ez_pz_hackover_2016/" title="ez_pz_hackover_2016">ez_pz_hackover_2016</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-02-27T02:34:48.596Z" title="Created 2025-02-27 10:34:48">2025-02-27</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ret2libc/">ret2libc</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ret2libc/PWN/">PWN</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/ret2libc/PWN/patchelf/">patchelf</a></span></div><div class="content">0x01：前言vc哥通过这题给我讲解了很多pwn题的细节，通过写这题的wp简单的记录一下，题目本身一个strcmp绕过+ret2libc 0x02：题目分析check：没有NX？ida看看吧：跟进header():继续往下看：可以看到fgets()但是读取的长度不足以溢出，继续往下看，发现有个vuln函数，跟进：发现memcpy()且第三个参数很大，可以溢出，那么我们要构造的payload就是先绕过chall()函数里面的strcmp()，最后做个ret2libc： 1234567printf_got=elf.got[&#x27;printf&#x27;]printf_plt=elf.plt[&#x27;printf&#x27;]chall_addr=0x08048603payload=b&#x27;crashme\x00&#x27;+b&#x27;a&#x27;*(0x32+4-8)+p32(printf_plt)+p32(chall_addr)+p32(printf_got)debug()sla(&#x27;&gt;...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/02/24/Fuko's%20starfish/" title="VNCTF2025_Fuko's starfish">VNCTF2025_Fuko's starfish</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-02-24T02:49:43.742Z" title="Created 2025-02-24 10:49:43">2025-02-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/VNCTF2025/">VNCTF2025</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/VNCTF2025/Reverse/">Reverse</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/VNCTF2025/Reverse/%E8%8A%B1%E6%8C%87%E4%BB%A4/">花指令</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/VNCTF2025/Reverse/%E8%8A%B1%E6%8C%87%E4%BB%A4/AES%E5%8A%A0%E5%AF%86%E7%AE%97%E6%B3%95%E8%AF%86%E5%88%AB/">AES加密算法识别</a></span></div><div class="content">0x01:前言主要还是加密算法识别，花指令识别，dll反调试（非必要） 0x02:分析比赛版当中的分析题目提供了一个exe以及一个dll，exe无壳，ida启动：暂时没看到flag的密文,考虑硬玩ing第一个是猜1到100的随机数,第二个游戏是贪吃蛇怎么操作噢在dll里面这里接收输入贪吃蛇游戏界面,wasd操作我先玩玩还有一个,先在ida里面翻一下好像是这个函数,有花:去一下flag密文应该是这一串, 就是那个while(里面的byte_1800A890) 1234567unsigned char ida_chars[] =&#123;    0x3D, 0x01, 0x1C, 0x19, 0x0B, 0xA0, 0x90, 0x81, 0x5F, 0x67,    0x27, 0x31, 0xA8, 0x9A, 0xA4, 0x74, 0x97, 0x36, 0x21, 0x67,    0xAB, 0x2E, 0xB4, 0xA0, 0x94, 0x18, 0xD3, 0x7D, 0x93, 0xE6,    0x46, 0xE7&#125;; 看起来明文长度应该是16,...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/02/24/%E8%A5%BF%E6%B9%96%E8%AE%BA%E5%89%912025_BitDance/" title="西湖论剑2025_BitDance">西湖论剑2025_BitDance</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-02-23T16:00:41.015Z" title="Created 2025-02-24 00:00:41">2025-02-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Black-box-testing/">Black-box testing</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Black-box-testing/Reverse/">Reverse</a></span></div><div class="content">0x01 前言：遇见的第一题没有附件的RE题，原来这种题目叫黑盒测试？ 0x02 分析题目只给了一个靶机，连接上去之后提示输入：（没存图片，这里借队友的用一下）输入不同长度的字符串会提示Wrong length， 总之先把长度给爆破出来，这里可以使用python的pwn库，也就是pwn常用工具pwntools： 123456789101112131415161718//字符长度爆破脚本from pwn import *context(log_level = &#x27;debug&#x27;, arch = &#x27;amd64&#x27;, os = &#x27;linux&#x27;)xihu=&#x27;139.155.126.78&#x27;stop=1text_len=&#x27;&#x27;while(stop):    p = remote(xihu,24847)      text_len+=&#x27;a&#x27;    p.sendlineafter(&#x27;Welcome to dance: &#x27;,text_len)    if...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/02/24/%7BNewStarCTF%202023%7Dcanary/" title="[NewStarCTF 2023]canary">[NewStarCTF 2023]canary</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-02-23T16:00:41.014Z" title="Created 2025-02-24 00:00:41">2025-02-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Canary/">Canary</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Canary/PWN/">PWN</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Canary/PWN/NewStarCTF-2023/">NewStarCTF 2023</a></span></div><div class="content">0x01 前言:初见Canary保护，主要还是了解Canary的原理以及如何绕过 0x02 分析:check:  可以看到开了canary保护  原理是在一个函数的入口，先从fs&#x2F;gs寄存器中取出一个四字节(eax)或者八字节的rax的值存在栈上(最低位都是\x00)，当函数结束是会检查这个栈上的值是否和存在去的值一致，若一致则正常退出，如果是栈溢出或者其他原因导致canary的值发生变化，那么程序就会执行___stack_chk_fali函数，继而保护程序  我们先打开ida看看:可以看到有printf, 大致的思路就是通过字符串格式化漏洞, 把字符串的偏移给找出来, 然后通过下面的read做栈溢出, 正常溢出到后门函数, 但是在溢出的时候我们把canary的值给修改了, 所以在构造payload的时候需要注意payload的结构, 首先我们先执行下这个程序:可以看到字符串的偏移是6, 接下来用gdb看看canary在哪里, 我们先在main函数的call printf这里下一个断点:首先启动gdb, 输入 1gdb...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2025/02/24/SUCTF_SU_BBRE/" title="SUCTF_SU_BBRE">SUCTF_SU_BBRE</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2025-02-23T16:00:41.013Z" title="Created 2025-02-24 00:00:41">2025-02-24</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Assembly-language/">Assembly language</a><i class="fas fa-angle-right article-meta-link"></i><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Assembly-language/Reverse/">Reverse</a></span></div><div class="content">0x01 前言:小弟第一回参加SUCTF，只打了day1，这题算是re的签到吧，很可惜最后也没有做出来，就差了中间地址跳转这一步 0x02 分析:上来是一大段汇编，...</div></div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/image/icon.jpg" onerror="this.onerror=null;this.src='/img/icon.jpg'" alt="avatar"/></div><div class="author-info-name">Li1nk</div><div class="author-info-description">hi, I am Li1nk</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">14</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Li1nk3"><i class="/img/icon.jpg"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/27/ez_pz_hackover_2016/" title="ez_pz_hackover_2016">ez_pz_hackover_2016</a><time datetime="2025-02-27T02:34:48.596Z" title="Created 2025-02-27 10:34:48">2025-02-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/24/Fuko's%20starfish/" title="VNCTF2025_Fuko's starfish">VNCTF2025_Fuko's starfish</a><time datetime="2025-02-24T02:49:43.742Z" title="Created 2025-02-24 10:49:43">2025-02-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/24/%E8%A5%BF%E6%B9%96%E8%AE%BA%E5%89%912025_BitDance/" title="西湖论剑2025_BitDance">西湖论剑2025_BitDance</a><time datetime="2025-02-23T16:00:41.015Z" title="Created 2025-02-24 00:00:41">2025-02-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/24/%7BNewStarCTF%202023%7Dcanary/" title="[NewStarCTF 2023]canary">[NewStarCTF 2023]canary</a><time datetime="2025-02-23T16:00:41.014Z" title="Created 2025-02-24 00:00:41">2025-02-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/24/SUCTF_SU_BBRE/" title="SUCTF_SU_BBRE">SUCTF_SU_BBRE</a><time datetime="2025-02-23T16:00:41.013Z" title="Created 2025-02-24 00:00:41">2025-02-24</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>Categories</span>
+            <a class="card-more-btn" href="/categories/" title="View More">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Assembly-language/"><span class="card-category-list-name">Assembly language</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Assembly-language/Reverse/"><span class="card-category-list-name">Reverse</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Black-box-testing/"><span class="card-category-list-name">Black-box testing</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Black-box-testing/Reverse/"><span class="card-category-list-name">Reverse</span><span class="card-category-list-count">1</span></a></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Canary/"><span class="card-category-list-name">Canary</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Canary/PWN/"><span class="card-category-list-name">PWN</span><span class="card-category-list-count">1</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Canary/PWN/NewStarCTF-2023/"><span class="card-category-list-name">NewStarCTF 2023</span><span class="card-category-list-count">1</span></a></li></ul></li></ul></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/VNCTF2025/"><span class="card-category-list-name">VNCTF2025</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>Archives</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/02/">
+            <span class="card-archive-list-date">
+              二月 2025
+            </span>
+            <span class="card-archive-list-count">5</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">5</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-03-06T01:04:40.768Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Li1nk</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["Hey!  &#44; Listen!"])
+  } else {
+    document.getElementById("subtitle").textContent = "Hey!  &#44; Listen!"
+  }
+}
+typedJSFn.run(subtitleType)</script></div><script defer="defer" id="fluttering_ribbon" mobile="false" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
