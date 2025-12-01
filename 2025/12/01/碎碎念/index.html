@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="zh_CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>NewStar CTF 2025 出题人碎碎念 &amp; 自己的年终(?)总结 | Ocarina of Time</title><meta name="author" content="L1nk"><meta name="copyright" content="L1nk"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="0x00 出题人的碎碎念招新招新本来呢是为了扩大招新力度，想着能找到更多的新鲜血液加入我们，防止断代。没想到抽到了大保底，出了两个天才少年，当然获奖的大家都很强，这下就不用再担心kap0k断代的问题了hh毕竟是第一次给这种规模的比赛出题，总是思考着会不会出的过于简单？会不会出得太难了？结果看来我出的题目都还可以吧，应该是能起到一定的引导学习的作用。想看官方题解的话可以留意qq群的通知以及NewSt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NewStar CTF 2025 出题人碎碎念 &amp; 自己的年终(?)总结">
+<meta property="og:url" content="http://example.com/2025/12/01/%E7%A2%8E%E7%A2%8E%E5%BF%B5/index.html">
+<meta property="og:site_name" content="Ocarina of Time">
+<meta property="og:description" content="0x00 出题人的碎碎念招新招新本来呢是为了扩大招新力度，想着能找到更多的新鲜血液加入我们，防止断代。没想到抽到了大保底，出了两个天才少年，当然获奖的大家都很强，这下就不用再担心kap0k断代的问题了hh毕竟是第一次给这种规模的比赛出题，总是思考着会不会出的过于简单？会不会出得太难了？结果看来我出的题目都还可以吧，应该是能起到一定的引导学习的作用。想看官方题解的话可以留意qq群的通知以及NewSt">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/image/new/cover.png">
+<meta property="article:published_time" content="2025-12-01T01:35:11.114Z">
+<meta property="article:modified_time" content="2025-12-01T02:06:30.310Z">
+<meta property="article:author" content="L1nk">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/image/new/cover.png"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "NewStar CTF 2025 出题人碎碎念 & 自己的年终(?)总结",
+  "url": "http://example.com/2025/12/01/%E7%A2%8E%E7%A2%8E%E5%BF%B5/",
+  "image": "http://example.com/image/new/cover.png",
+  "datePublished": "2025-12-01T01:35:11.114Z",
+  "dateModified": "2025-12-01T02:06:30.310Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "L1nk",
+      "url": "http://example.com/"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/image/icon.jpg"><link rel="canonical" href="http://example.com/2025/12/01/%E7%A2%8E%E7%A2%8E%E5%BF%B5/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="google-site-verification=IjHqjuAPjMzEU5yDk447iaoJgZAIJlGwqJoAjAtoCQ0"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":false,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Failed',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: true,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'NewStar CTF 2025 出题人碎碎念 & 自己的年终(?)总结',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><meta name="generator" content="Hexo 7.3.0"></head><body><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+btf.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js/themes/blue/pace-theme-minimal.min.css"/><script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script><div id="web_bg" style="background-image: url(/image/cover/background1.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/image/icon.jpg" onerror="this.onerror=null;this.src='/img/icon.jpg'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">56</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> homepage</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> about</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Ocarina of Time</span></a><a class="nav-page-title" href="/"><span class="site-name">NewStar CTF 2025 出题人碎碎念 &amp; 自己的年终(?)总结</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> homepage</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fa fa-folder-open"></i><span> archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fa fa-tags"></i><span> tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fa fa-archive"></i><span> categories</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> link</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> about</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav></header><main class="layout" id="content-inner"><div id="post"><div id="post-info"><h1 class="post-title">NewStar CTF 2025 出题人碎碎念 &amp; 自己的年终(?)总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2025-12-01T01:35:11.114Z" title="Created 2025-12-01 09:35:11">2025-12-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2025-12-01T02:06:30.310Z" title="Updated 2025-12-01 10:06:30">2025-12-01</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A2%8E%E7%A2%8E%E5%BF%B5/">碎碎念</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><article class="container post-content" id="article-container"><h1 id="0x00-出题人的碎碎念"><a href="#0x00-出题人的碎碎念" class="headerlink" title="0x00 出题人的碎碎念"></a>0x00 出题人的碎碎念</h1><h2 id="招新招新"><a href="#招新招新" class="headerlink" title="招新招新"></a>招新招新</h2><p>本来呢是为了扩大招新力度，想着能找到更多的新鲜血液加入我们，防止断代。没想到抽到了大保底，出了两个天才少年，当然获奖的大家都很强，这下就不用再担心kap0k断代的问题了hh<br>毕竟是第一次给这种规模的比赛出题，总是思考着会不会出的过于简单？会不会出得太难了？结果看来我出的题目都还可以吧，应该是能起到一定的引导学习的作用。想看官方题解的话可以留意qq群的通知以及<a target="_blank" rel="noopener" href="https://newstar.wiki/">NewStar wiki</a>。</p>
+<p>不过不得不感叹现在ai越来越强了，第一周大家都在用ai乱杀，没错，pwn也无一幸免。<br><img src="/image/new/image-15.png" alt="alt text">可以看到week1的解题人数还是很多的。但是后果就是，从week2开始都熄火了，除了我出的能被ai秒的格式化字符串签到题，剩下的题都只有个位数解。。。<br><img src="/image/new/image-16.png" alt="alt text">ai太强了给了很多人错觉，事实上后面大调查的时候也印证了这个事实，调查对象中甚至有人自己做了什么题都不记得了，简直是超级ai驾驶员。</p>
+<p>我那个年代哪能有这么好的条件(这句像是老人会说的话)</p>
+<p>通过newstar，我加入了 <a target="_blank" rel="noopener" href="https://cdssmacau.com/">澳門網絡及數據安全學會</a> 。其实一开始是在newstar的赞助名单上看到了这个学会，但当时太颓废了，本来是打算国庆回家顺便去线下了解一下，但是也没有去。好在最后也是通过一些契机成功加进去了，希望能通过这个学会找到一些工作或者实习什么的。但是最近好像没什么动静了<br>不过好在因此认识了个学长，他在从事这方面的工作，了解到我们还是有相关岗位的，也是让我稍微放松了一些。</p>
+<h1 id="0x01-自己的年终-总结"><a href="#0x01-自己的年终-总结" class="headerlink" title="0x01 自己的年终(?)总结"></a>0x01 自己的年终(?)总结</h1><h2 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h2><p>在大一下学期的时候，选到了学校的CTF专业选修课，这也算是我的启蒙了。与大多数人一样，我是 misc 起手的，为了准备学校的招新校赛，当时也稍微学了一些 re 和 crypto。到了大二开学的时候，知道了newstar 2024，但疑惑的是，明明23年有校内赛道，为什么24年没了？</p>
+<p>没办法我也只能去打公开赛道了，很怀念当时纯良的时候，每道题都是手搓，也还不是一名正式的 ai 驾驶员</p>
+<h2 id="学校招新"><a href="#学校招新" class="headerlink" title="学校招新"></a>学校招新</h2><p>印象中打到week3还是week4，就到了校赛开赛的时候，一开始靠着知识面比较广，拿下了不少分。对，我半场开香槟了<img src="/image/new/7da726d66582c802f61092fe19e60bf9.jpg" alt="alt text">结果就是最后被 re✌用两题大的斩杀了<img src="/image/new/image.png" alt="alt text">然后喜提二等奖。。。</p>
+<h2 id="回到newstar-2024"><a href="#回到newstar-2024" class="headerlink" title="回到newstar 2024"></a>回到newstar 2024</h2><p>经过了5周的鏖战，喜提公开赛道100多名。为什么我能坚持这么久呢，是因为把当时校内的获奖条件和校外的搞混了，我以为公开赛道也有 60% 获奖率，所以我坚持下来了。。。幸运的是就算我100多名也混到了3等奖<img src="/image/new/8ad6e5628282d5adb4aed2586ddac079.jpg" alt="alt text"> </p>
+<h2 id="加入kap0k"><a href="#加入kap0k" class="headerlink" title="加入kap0k"></a>加入kap0k</h2><p>因为校赛打得还不错，所以也是加入了校队，与大哥们一起打比赛。第一次在正经比赛上解题是24年的鹏城杯，当时解了两道re，给我高兴坏了，当时也想的是re一直学下去，不过在跟同年级的web队友<a target="_blank" rel="noopener" href="https://kc1zs4.github.io/">kc1zs4</a>聊过天之后发现，我们23级没人打pwn，当时斩杀我的re✌还在沉淀课内(应该是吧，我猜的)，说是之后再来打，我顿时觉得自己地位不保了，是不是该转职比较好呢？</p>
+<h2 id="依旧比赛"><a href="#依旧比赛" class="headerlink" title="依旧比赛"></a>依旧比赛</h2><p>想是这样想，但还是没实际去做，依旧还是学着re，混！到了大概12月头，打了 PolarCTF 拿到了2等<img src="/image/new/image-1.png" alt="alt text"> 也是一个比较简单的比赛。后面就是边比赛边学，然后就到了万恶的ciscn。24 年提前了。。。对于一个刚入门没多久的新生，我当时坐牢了一整天，然后爆0了，看来仍需沉淀。</p>
+<p>到了期末，尝试打了软件系统安全赛，也坐牢了，只签了个到，没想到也拿到了省3<br><img src="/image/new/image-2.png" alt="alt text"></p>
+<h2 id="寒假"><a href="#寒假" class="headerlink" title="寒假"></a>寒假</h2><p>一放假就无心学习，整天到处玩，本来是想着趁着寒假来入门pwn的。。。不过也是刷刷刷，也还没太掌握。我说我打的每道题都没patch你信吗。。。GDB也不开，纯在脑子里跑，刷算法编程题来了，别人是面向过程，我是面向返回结果。。<img src="/image/new/image-3.png" alt="alt text">不过寒假快结束的时候去看了ado演唱会，现场真的无敌！<img src="/image/new/b1452a90365435287632f5c6aa1d53d2.jpg" alt="alt text"></p>
+<h2 id="与SU结缘？"><a href="#与SU结缘？" class="headerlink" title="与SU结缘？"></a>与SU结缘？</h2><p>应该是大二下学期开始的时候，通过xctf分站赛的SUCTF，也是初次接触到了SU，不过我当时还是个小菜鸟，re学不精，pwn学不进去，最终只做了day1的re签到，然后遗憾离场。</p>
+<h2 id="搭了人生中第一个博客"><a href="#搭了人生中第一个博客" class="headerlink" title="搭了人生中第一个博客"></a>搭了人生中第一个博客</h2><p>就是你现在在看的这个，在2月24的时候，我发布了第一篇文章，也就是SUCTF那题re签到 <a target="_blank" rel="noopener" href="https://li1nk3.github.io/2025/02/24/SUCTF_SU_BBRE/">SUCTF_SU_BBRE</a>。当时找各种比赛题解可以看到很多大佬的博客，觉得帅爆了，能挂自己的战队链接，能挂很多友链，自己也试着了搭一个，比我想象中的要简单一些。</p>
+<h2 id="学校活动室"><a href="#学校活动室" class="headerlink" title="学校活动室"></a>学校活动室</h2><p>貌似是从大二上末期的时候，我的活动范围从宿舍迁移到了宿舍楼的活动室，也是校队专用的活动室，经常在那里和 <a target="_blank" rel="noopener" href="https://kc1zs4.github.io/">kc1zs4</a> 一起学习。应该是大二下开头，遇到了来准备面试的 vch4t 大哥，他是kap0k的超级pwn爹，在我入门学习的路上给了我不少帮助。</p>
+<p>大概是3月头的时候，打了GHCTF2025，是一个新生赛，在 vch4t 大哥的指导下，我做出来了挺多pwn题，对pwn也有了更进一步的了解，总算愿意用GDB了，总算愿意patch程序了，一下子就把我的进度提高了一些。以往自己学的时候浑浑噩噩的，本地打不通直接打远程，远程打不通直接看题解，看了题解发现好像做法差不多，盯着看了半天没找到问题在哪，也不愿意GDB看一下，最后直接放弃。</p>
+<h2 id="为数不多的高光时刻？"><a href="#为数不多的高光时刻？" class="headerlink" title="为数不多的高光时刻？"></a>为数不多的高光时刻？</h2><p>依旧3月头，那时我还没完全放下re，在xctf分站赛 TPCTF 中，我解出了一道re题，是一个fc小游戏的逆向，预期解貌似非常简单，但是我做的是非预期，也是第一次一道题从早做到晚。。。<br><img src="/image/new/image-17.png" alt="alt text"></p>
+<h2 id="4月是你的。。。"><a href="#4月是你的。。。" class="headerlink" title="4月是你的。。。"></a>4月是你的。。。</h2><p>直到4月，迎来了kap0k 23级第一个拿到奖的比赛，TGCTF，是杭州师范大学举办的一个比赛，不过我做出来的pwn题都被大伙打成最低分了捏，纯靠队友carry哈哈<br><img src="/image/new/image-4.png" alt="alt text"></p>
+<p>印象中大概是4月左右 kap0k 的另一个 crypto&amp; pwn 大爹 mahj0ng 也来常驻活动室，活动室变得热闹起来了。从4月开始就在狂打比赛，先是XYCTF。。。pwn只做了一题，被队友带到40多名<br><img src="/image/new/image-5.png" alt="alt text">但是没交wp，最终痛失3等奖。</p>
+<p>4月中的时候，有个叫UCSCCTF的比赛，mahj0ng 大哥ak了crypto，我蹭到了人生中第一个一等奖<img src="/image/new/image-6.png" alt="alt text">但是队名莫名搞笑(他们两个是朋友)</p>
+<p>4月末，还是xctf分站赛，ACTF(浙大好强)，pwn 依旧做不出来，但是做了题misc，就是那个给一帧电影画面然后找电影的题，最后在大家的集思广益下艰难获胜<br><img src="/image/new/image-8.png" alt="alt text"><br><img src="/image/new/image-9.png" alt="alt text"></p>
+<h2 id="五月"><a href="#五月" class="headerlink" title="五月"></a>五月</h2><p>5月头，迎来了臭名昭著的ISCC，虽然他很垃圾，但是是我人生中第一个国家级的3等奖<br><img src="/image/new/image-7.png" alt="alt text">折磨了我整整一个月。但是我见证了73s 秒掉 kernel pwn的传说，那是来自北京理工大学的BITS2sys，完全就是传奇。</p>
+<p>以及一系列的神话<br><img src="/image/new/image-18.png" alt="alt text"><img src="/image/new/image-19.png" alt="alt text"></p>
+<p>月中是 “轩辕杯”云盾砺剑 CTF挑战赛，拿到了第一个带壳的证书<img src="/image/new/image-10.png" alt="alt text"></p>
+<p>还有LitCTF 2025，说起这个就气，pwn那道侧信道爆破最后没爆出来，痛失2等奖。。。<img src="/image/new/image-11.png" alt="alt text">不过拿到了NSS的贴纸，也还能接受吧。</p>
+<p>到了6月初，2025 H&amp;NCTF，这时候的我已经完全成为了ai驾驶员，原题搜索者(crypto 方面)，在做完pwn之后也是靠着ai和浏览器做了很多crypto，也是拿到了一个比较好看的名次<img src="/image/new/image-12.png" alt="alt text"></p>
+<p>这时候基本上就被期末、各种实验和各种大作业堆满了，大家也没什么空。到了7月中，依旧xctf分站赛， L3HCTF，ai驾驶员和原题搜索者直接发力，ak掉了crypto，完全不务正业。。。不过好消息是kap0k在xctf分站赛的排名越来越高了，也是在队长<a target="_blank" rel="noopener" href="https://kc1zs4.github.io/">kc1zs4</a>的带领下来到了前30<br><img src="/image/new/image-13.png" alt="alt text"></p>
+<h2 id="忙里偷闲"><a href="#忙里偷闲" class="headerlink" title="忙里偷闲"></a>忙里偷闲</h2><p>我不是一个爱炫耀的人，但是你们怎么知道我在6月11号晚上07:00，在香港看了ずっと真夜中でいいのに。演唱會2024香港站，这是我人生中第二次自己出钱去看的演唱会<img src="/image/new/6024b525ea6640bf970cc8e04c32dc2d.jpg" alt="alt text"><br>哇好多应援棒^^</p>
+<h2 id="大二的暑假"><a href="#大二的暑假" class="headerlink" title="大二的暑假"></a>大二的暑假</h2><p>7月中，听说澳门举办了一个CTF比赛，也是屁颠屁颠的去打了，最后是公开组第5，没拿到任何奖品。。。但是这个比赛是SU出题的，也是再次结缘了捏。<br><img src="/image/new/88e4574ade17dbb99f8a8ffec2cd5ede.jpg" alt="alt text">我是手机拍屏大王</p>
+<p>过了几天去了熵密杯，这也是我第一次出省打线下比赛。原本的打算是来重庆旅游，不抱任何获奖希望。但是在赛场上计划有变，我做出了一题不太传统的密码题（一道比较简单的代码审计），开启了后面的关卡，最后也是跟队友成功做出了一道流量题。成功混到了优胜奖hhh。<br><img src="/image/new/84baeeaf8cdc062a80178520980cb1b7.jpg" alt="alt text"></p>
+<p>暑假超级颓废，从熵密杯回来之后，我就一直窝在家里打游戏(都怪LOL大乱斗)，也不愿意出门，Q群也不水了，直接是人间蒸发了2个月，每天都玩到3，4点才睡，纯纯的一个废人，心情状态什么的都很差。</p>
+<p>8月末，我们去了北邮，参观了天枢Dubhe的老巢，打了第一届人工智能安全比赛，在kap0k的web大手子binbin哥的带领下也是摸到了一个国二<img src="/image/new/a362b8ac5e7ecf5e241b15f6f752f201.jpg" alt="alt text"></p>
+<h2 id="开学"><a href="#开学" class="headerlink" title="开学"></a>开学</h2><p>已经正式成为一个大三老人了，协办了NewStar CTF 2025。给他们贡献了一个格式化字符串系列题目，总共5题，还有一题IO FILE在week5临时出的，本来是想挡一挡校内一个新生的势头，不过没挡住。。。也是体验到了后继有人的感觉。希望kap0k可以越来越强捏。</p>
+<p>大约9月末的时候，SU的队长<a target="_blank" rel="noopener" href="https://baozongwi.xyz/">baozongwi</a>找到了我，问我要不要加入SU，我想这一定是为数不多的机会，也是跟着SU打了两场比赛，运气比较好，解了不少题目，通过了考核，正式加入了SU。在SU的博客里可以找到我 <a target="_blank" rel="noopener" href="https://su-team.cn/members/">su-team</a><br><img src="/image/new/image-14.png" alt="alt text"><br>我也来稍微宣传一下好了：</p>
+<p>我们也在持续招人，欢迎发送个人简介至：<a href="mailto:&#x73;&#x75;&#101;&#114;&#x73;&#x5f;&#x78;&#99;&#116;&#102;&#64;&#x31;&#x32;&#x36;&#x2e;&#x63;&#x6f;&#x6d;">suers_xctf@126.com</a> 或者直接联系baozongwi QQ:2405758945。</p>
+<p>开学到现在打的比赛都比较难，校队没什么特别出色的成绩。小水了一个长城卫士<img src="/image/new/changcheng.png" alt="alt text"></p>
+<p>比较伤心的是10月中的羊城杯吧，遇上天才少年，拼尽全力无法战胜，最终差1名进入线下决赛。不过SU一直在起飞，跟着各个大佬学习，也是学到了很多。在10月末的时候，我们SU拿到了强网拟态的冠军，其中我也贡献了一道车联网(pwn)的题目，也是第一次给SU写题解了，开心 </p>
+<p>指路-&gt;<a target="_blank" rel="noopener" href="https://su-team.cn/posts/29a7c1c3.html#can">第八届“强网”拟态防御国际精英挑战赛 SU Writeup</a></p>
+<p>总结到这里就结束了，希望这个系列还有后续，还在书写剩下的篇章。过去的一年中认识了许多朋友，无论是现实中的还是网友，都让我获益良多，非常感谢你们。</p>
+<h1 id="0x02-未来"><a href="#0x02-未来" class="headerlink" title="0x02 未来"></a>0x02 未来</h1><p>毕竟现在也大三了，必须开始思考将来的道路，不知道是读研还是工作，好迷茫。希望自己能越来越好，新人能够重振kap0k荣光，SU越来越牛。Live long and PWN</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="http://example.com">L1nk</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="http://example.com/2025/12/01/%E7%A2%8E%E7%A2%8E%E5%BF%B5/">http://example.com/2025/12/01/%E7%A2%8E%E7%A2%8E%E5%BF%B5/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles on this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless otherwise stated.</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/image/new/cover.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/image/icon.jpg" onerror="this.onerror=null;this.src='/img/icon.jpg'" alt="avatar"/></div><div class="author-info-name">L1nk</div><div class="author-info-description">Live long and pwn</div><div class="site-data"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">32</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">56</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Li1nk3"><i class="/img/icon.jpg"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#0x00-%E5%87%BA%E9%A2%98%E4%BA%BA%E7%9A%84%E7%A2%8E%E7%A2%8E%E5%BF%B5"><span class="toc-number">1.</span> <span class="toc-text">0x00 出题人的碎碎念</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8B%9B%E6%96%B0%E6%8B%9B%E6%96%B0"><span class="toc-number">1.1.</span> <span class="toc-text">招新招新</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0x01-%E8%87%AA%E5%B7%B1%E7%9A%84%E5%B9%B4%E7%BB%88-%E6%80%BB%E7%BB%93"><span class="toc-number">2.</span> <span class="toc-text">0x01 自己的年终(?)总结</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%B7%E6%BA%90"><span class="toc-number">2.1.</span> <span class="toc-text">起源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E6%A0%A1%E6%8B%9B%E6%96%B0"><span class="toc-number">2.2.</span> <span class="toc-text">学校招新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9E%E5%88%B0newstar-2024"><span class="toc-number">2.3.</span> <span class="toc-text">回到newstar 2024</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A0%E5%85%A5kap0k"><span class="toc-number">2.4.</span> <span class="toc-text">加入kap0k</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%9D%E6%97%A7%E6%AF%94%E8%B5%9B"><span class="toc-number">2.5.</span> <span class="toc-text">依旧比赛</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AF%92%E5%81%87"><span class="toc-number">2.6.</span> <span class="toc-text">寒假</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8ESU%E7%BB%93%E7%BC%98%EF%BC%9F"><span class="toc-number">2.7.</span> <span class="toc-text">与SU结缘？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%90%AD%E4%BA%86%E4%BA%BA%E7%94%9F%E4%B8%AD%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%9A%E5%AE%A2"><span class="toc-number">2.8.</span> <span class="toc-text">搭了人生中第一个博客</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E6%A0%A1%E6%B4%BB%E5%8A%A8%E5%AE%A4"><span class="toc-number">2.9.</span> <span class="toc-text">学校活动室</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%BA%E6%95%B0%E4%B8%8D%E5%A4%9A%E7%9A%84%E9%AB%98%E5%85%89%E6%97%B6%E5%88%BB%EF%BC%9F"><span class="toc-number">2.10.</span> <span class="toc-text">为数不多的高光时刻？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E6%9C%88%E6%98%AF%E4%BD%A0%E7%9A%84%E3%80%82%E3%80%82%E3%80%82"><span class="toc-number">2.11.</span> <span class="toc-text">4月是你的。。。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E6%9C%88"><span class="toc-number">2.12.</span> <span class="toc-text">五月</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BF%99%E9%87%8C%E5%81%B7%E9%97%B2"><span class="toc-number">2.13.</span> <span class="toc-text">忙里偷闲</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E4%BA%8C%E7%9A%84%E6%9A%91%E5%81%87"><span class="toc-number">2.14.</span> <span class="toc-text">大二的暑假</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%AD%A6"><span class="toc-number">2.15.</span> <span class="toc-text">开学</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#0x02-%E6%9C%AA%E6%9D%A5"><span class="toc-number">3.</span> <span class="toc-text">0x02 未来</span></a></li></ol></div></div></div></div></main><footer id="footer" style="background: transparent;"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By L1nk</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Reading Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
